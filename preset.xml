@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<preset>
+
+<description/>
+
+<settings>
+<intro/>
+<comments>0</comments>
+<requiredentries>0</requiredentries>
+<requiredentriestoview>0</requiredentriestoview>
+<maxentries>0</maxentries>
+<rssarticles>0</rssarticles>
+<approval>0</approval>
+<manageapproved>1</manageapproved>
+<defaultsortdir>0</defaultsortdir>
+<defaultsort>0</defaultsort>
+</settings>
+
+<field>
+<type>text</type>
+<name>Titel</name>
+<required>0</required>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Prompt</name>
+<required>0</required>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>checkbox</type>
+<name>Kategorie</name>
+<required>0</required>
+<param1>Seminarkonzeption
+Methoden- &amp; Aktivit&#xE4;tsdesign
+Lernmaterialien &amp; Erkl&#xE4;rtexte
+Aufgaben &amp; Arbeitsbl&#xE4;tter
+Pr&#xFC;fungen &amp; Leistungsnachweise
+Bewertung &amp; Feedback
+Differenzierung &amp; F&#xF6;rderung
+Diagnostik &amp; Lernstand
+Interaktive Lernformate &amp; Moderation
+Projekt- &amp; Problem-Based Learning
+Visualisierung &amp; Bildgenerierung
+Tutorials &amp; Schritt-f&#xFC;r-Schritt-Anleitungen</param1>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Systemprompt</name>
+<description>weitere technische oder meta Beschreibungen</description>
+<required>0</required>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Beispiel-Output</name>
+<description>Um zu verstehen, welches Ergebnis der Prompt hervorbringt</description>
+<required>0</required>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+</preset>

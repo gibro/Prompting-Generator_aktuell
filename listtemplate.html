@@ -1,0 +1,60 @@
+<!--
+  Moodle Database List Template – Prompt-Bibliothek
+  Syntax lt. https://docs.moodle.org/501/de/Datenbankvorlagen
+  • Felder: [[fieldname]]  → [[Titel]], [[Prompt]], [[Kategorie]], [[Systemprompt]] (Feldnamen aus preset.xml)
+  • Alle anderen Tags: ##tag##  → ##user##, ##timeadded##, ##more##, ##moreurl##, ##edit##, ##delete##, ##comments##, ##approve##, ##timemodified##, ##userpicture##, ##actionsmenu## …
+-->
+<div class="prompt-card" data-entry-id="[[id]]">
+  <span class="prompt-card__meta prompt-card__meta--system" data-field="systemprompt" aria-hidden="true">[[Systemprompt]]</span>
+  <span class="prompt-card__meta prompt-card__meta--system" data-field="kategorie" aria-hidden="true">[[Kategorie]]</span>
+  <div class="prompt-card__window">
+    <header class="prompt-card__titlebar">
+      <label class="prompt-card__bulk-label" title="Zum Löschen auswählen">
+        <input type="checkbox" class="prompt-card__bulk-select" aria-label="Eintrag zum Löschen auswählen">
+      </label>
+      <span class="prompt-card__title">[[Titel]]</span>
+      <span class="prompt-card__titlebar-actions">##edit## ##delete##</span>
+    </header>
+    <div class="prompt-card__body">
+      <div class="prompt-card__teaser">
+        <div class="prompt-card__chat">
+          <div class="prompt-card__bubble prompt-card__bubble--template" aria-hidden="true">
+            <pre class="prompt-card__raw">[[Prompt]]</pre>
+          </div>
+          <div class="prompt-card__bubble prompt-card__bubble--preview" role="status" aria-live="polite">
+            <div class="prompt-card__preview" aria-label="Prompt-Vorschau"></div>
+          </div>
+        </div>
+        <button type="button" class="prompt-card__select-btn" aria-label="Karte auswählen">Auswählen</button>
+      </div>
+      <div class="prompt-card__expandable">
+        <div class="prompt-card__inputs" role="form" aria-label="Platzhalter ausfüllen">
+          <!-- Dynamisch per JS: Label + Input pro Platzhalter -->
+        </div>
+        <div class="prompt-card__actions">
+          <button type="button" class="prompt-card__btn prompt-card__btn--primary">
+            Prompt konfigurieren
+          </button>
+          <button type="button" class="prompt-card__btn prompt-card__btn--copy">
+            In die Zwischenablage kopieren
+          </button>
+        </div>
+        <div class="prompt-card__feedback" role="status" aria-live="polite" hidden>
+          Kopiert!
+        </div>
+        <div class="prompt-card__more">
+          <div class="prompt-card__system-wrap">
+            <button type="button" class="prompt-system-toggle prompt-system-toggle--icon-only" aria-expanded="false" aria-controls="system-content-[[id]]" aria-label="Mehr ein- oder ausklappen">
+              <span class="prompt-system-toggle__label">Mehr</span>
+              <span class="prompt-system-toggle__arrow" aria-hidden="true">▼</span>
+            </button>
+            <div id="system-content-[[id]]" class="prompt-card__more-content" hidden>
+              <div class="prompt-card__system-content">[[Systemprompt]]</div>
+              <p class="prompt-card__added">Hinzugefügt von ##user## am ##timeadded##</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

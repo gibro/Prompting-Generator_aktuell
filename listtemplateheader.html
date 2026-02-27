@@ -1,0 +1,17 @@
+<!-- Listenansicht: Kategorie-Filter und Wrapper für die Prompt-Karten -->
+<div class="prompt-library-filter">
+  <label for="prompt-library-filter-select" class="prompt-library-filter__label">Kategorie</label>
+  <select id="prompt-library-filter-select" class="prompt-library-filter__select" aria-label="Nach Kategorie filtern">
+    <option value="">Alle Kategorien</option>
+  </select>
+</div>
+<div class="prompt-library-bulk" id="prompt-library-bulk" hidden aria-live="polite">
+  <label class="prompt-library-bulk__select-all">
+    <input type="checkbox" class="prompt-library-bulk__select-all-input" aria-label="Alle sichtbaren Einträge auswählen">
+    <span class="prompt-library-bulk__select-all-label">Alle auswählen</span>
+  </label>
+  <span class="prompt-library-bulk__count"><span class="prompt-library-bulk__count-num">0</span> ausgewählt</span>
+  <button type="button" class="prompt-library-bulk__delete-btn">Ausgewählte löschen</button>
+  <p class="prompt-library-bulk__hint">Öffnet die Löschbestätigung pro Eintrag in neuen Tabs.</p>
+</div>
+<div class="prompt-library-list">

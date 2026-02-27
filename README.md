@@ -1,0 +1,102 @@
+# Prompting-Generator für Moodle (`mod_data`)
+
+Diese Vorlage stellt eine Prompt-Bibliothek in einer Moodle-Datenbankaktivität (`mod_data`) bereit.  
+Einträge können als wiederverwendbare Prompt-Templates gepflegt, mit Platzhaltern konfiguriert und als finaler Prompt in die Zwischenablage kopiert werden.
+
+## Funktionen
+
+- Prompt-Karten in Listen- und Einzelansicht mit einheitlichem UI (inkl. responsivem Grid).
+- Dynamische Platzhalter-Erkennung im Prompt über `{Platzhaltername}`.
+- Automatische Eingabefelder pro erkanntem Platzhalter.
+- Live-Vorschau: Platzhalter werden farblich markiert, ausgefüllte Werte direkt angezeigt.
+- Copy-Flow: Beim Kopieren wird `Systemprompt + Prompt` zu einem finalen Text zusammengeführt.
+- Kategorie-Filter in der Listenansicht.
+- Kartenfokus per Overlay: Karte auswählen, erweitern, bearbeiten.
+- „Mehr“-Bereich zum Ein-/Ausklappen des Systemprompts.
+- Mehrfachauswahl und Sammellöschen (öffnet Löschdialoge je Eintrag in separaten Tabs).
+- Rollenabhängige UI-Ausblendung:
+  - Für Teilnehmende/Studierende werden Bearbeiten/Löschen und Bulk-Delete ausgeblendet.
+- Kategorie-Farbcodierung: Kartenfarbe wird aus der ersten Kategorie automatisch gesetzt.
+
+## Datenmodell (Felder aus `preset.xml`)
+
+- `Titel` (Text)
+- `Prompt` (Textbereich)
+- `Kategorie` (Checkbox, Mehrfachauswahl)
+- `Systemprompt` (Textbereich)
+- `Beispiel-Output` (Textbereich)
+
+## Dateien in diesem Repository
+
+- `preset.xml` – Felddefinitionen und Basis-Einstellungen für die Datenbankaktivität.
+- `addtemplate.html` – Eingabeformular für neue Prompts.
+- `listtemplateheader.html` – Kopfbereich der Listenansicht (Filter + Bulk-Bar).
+- `listtemplate.html` – Kartenansicht je Datensatz.
+- `listtemplatefooter.html` – Listenabschluss (Overlay + Wrapper-Ende).
+- `singletemplate.html` – Einzelansicht eines Datensatzes.
+- `csstemplate.css` – Styles für List/Single/Add inklusive Rollen-UI.
+- `jstemplate.js` – Interaktionen (Platzhalter, Vorschau, Filter, Kopieren, Auswahl, Bulk).
+- `asearchtemplate.html`, `rsstemplate.html`, `rsstitletemplate.html` – derzeit leer.
+
+## Installation in Moodle als `mod_data`
+
+### Voraussetzungen
+
+- Moodle mit aktivierter Aktivität **Datenbank** (`mod_data`).
+- Bearbeitungsrechte im Kurs (mindestens Trainer:in mit Aktivitätserstellung).
+
+### Schritt 1: Datenbankaktivität anlegen
+
+1. Im Kurs auf **Aktivität oder Material anlegen** klicken.
+2. **Datenbank** auswählen.
+3. Aktivität benennen (z. B. `Prompting-Generator`), speichern.
+
+### Schritt 2: Preset importieren
+
+1. Die angelegte Datenbank öffnen.
+2. Reiter **Vorlagen** oder **Voreinstellungen** (je nach Moodle-Version/Theme) öffnen.
+3. **Preset importieren** auswählen.
+4. Datei `preset.xml` aus diesem Repository hochladen.
+5. Import bestätigen.
+
+Damit werden die benötigten Felder (`Titel`, `Prompt`, `Kategorie`, `Systemprompt`, `Beispiel-Output`) angelegt.
+
+### Schritt 3: Templates einfügen
+
+In der Datenbankaktivität unter **Vorlagen** die Inhalte aus den Dateien einfügen:
+
+1. **Listentitel/Kopf** → Inhalt aus `listtemplateheader.html`
+2. **Listenansicht** → Inhalt aus `listtemplate.html`
+3. **Listenfuß** → Inhalt aus `listtemplatefooter.html`
+4. **Einzelansicht** → Inhalt aus `singletemplate.html`
+5. **Eingabevorlage (Add template)** → Inhalt aus `addtemplate.html`
+6. **CSS-Vorlage** → Inhalt aus `csstemplate.css`
+7. **JavaScript-Vorlage** → Inhalt aus `jstemplate.js`
+
+Optional:
+
+- `asearchtemplate.html` für erweiterte Suche (derzeit leer).
+- RSS-Templates (`rsstemplate.html`, `rsstitletemplate.html`) bei Bedarf.
+
+### Schritt 4: Rechte/Rollen prüfen
+
+Die CSS-Regeln blenden Bearbeiten/Löschen für Teilnehmende anhand von Body-Klassen aus (`role-student`, `role-teilnehmer`, `role-teilnehmende`).  
+Zusätzlich sollten die Moodle-Rechte korrekt gesetzt sein, damit Teilnehmende keine unerlaubten Aktionen ausführen können.
+
+### Schritt 5: Funktionstest
+
+1. Testeintrag mit Platzhaltern anlegen, z. B.  
+   `Erstelle einen Unterrichtsplan für {Fach} in Klasse {Klassenstufe}.`
+2. Listenansicht öffnen:
+   - Kategorie filtern
+   - Karte auswählen
+   - Platzhalter ausfüllen
+   - **In die Zwischenablage kopieren** testen
+3. Prüfen, ob der kopierte Text `Systemprompt` + ausgefüllten Prompt enthält.
+
+## Pflege und Anpassung
+
+- Neue Kategorien können in `preset.xml` im Feld `Kategorie` (`<param1>...</param1>`) ergänzt werden.
+- UI/Branding wird über `csstemplate.css` gesteuert.
+- Interaktionslogik (Platzhalter, Copy, Filter, Bulk) liegt in `jstemplate.js`.
+

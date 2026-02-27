@@ -1,0 +1,47 @@
+<!--
+  Einzelansicht – Syntax: https://docs.moodle.org/501/de/Datenbankvorlagen
+  Felder: [[fieldname]]. Aktionen: ##user##, ##timeadded##, ##timemodified##, ##edit##, ##delete##, ##comments## …
+-->
+<div class="prompt-single">
+  <div class="prompt-card" data-entry-id="[[id]]">
+    <span class="prompt-card__meta prompt-card__meta--system" data-field="systemprompt" aria-hidden="true">[[Systemprompt]]</span>
+    <span class="prompt-card__meta prompt-card__meta--system" data-field="kategorie" aria-hidden="true">[[Kategorie]]</span>
+    <div class="prompt-card__window">
+      <header class="prompt-card__titlebar">
+        <span class="prompt-card__title">[[Titel]]</span>
+      </header>
+      <div class="prompt-card__body">
+        <div class="prompt-card__chat">
+          <div class="prompt-card__bubble prompt-card__bubble--template" aria-hidden="true">
+            <pre class="prompt-card__raw">[[Prompt]]</pre>
+          </div>
+          <div class="prompt-card__bubble prompt-card__bubble--preview" role="status" aria-live="polite">
+            <div class="prompt-card__preview" aria-label="Prompt-Vorschau"></div>
+          </div>
+        </div>
+        <div class="prompt-card__inputs" role="form" aria-label="Platzhalter ausfüllen"></div>
+        <div class="prompt-card__actions">
+          <button type="button" class="prompt-card__btn prompt-card__btn--primary">Prompt konfigurieren</button>
+          <button type="button" class="prompt-card__btn prompt-card__btn--copy">In die Zwischenablage kopieren</button>
+        </div>
+        <div class="prompt-card__feedback" role="status" aria-live="polite" hidden>Kopiert!</div>
+        <div class="prompt-card__more">
+          <section class="prompt-single__system">
+            <button type="button" class="prompt-system-toggle" aria-expanded="false" aria-controls="single-system-content-[[id]]" aria-label="Mehr ein- oder ausklappen">
+              <span class="prompt-system-toggle__label" id="single-system-label">Mehr</span>
+              <span class="prompt-system-toggle__arrow" aria-hidden="true">▼</span>
+            </button>
+            <div id="single-system-content-[[id]]" class="prompt-card__more-content" hidden>
+              <div class="prompt-single__system-content">[[Systemprompt]]</div>
+              <p class="prompt-card__added">Hinzugefügt von ##user## am ##timeadded##</p>
+            </div>
+          </section>
+        </div>
+        <div class="prompt-single__entry-actions">
+          ##edit##
+          ##delete##
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
