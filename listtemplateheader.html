@@ -11,7 +11,19 @@
     <span class="prompt-library-bulk__select-all-label">Alle auswählen</span>
   </label>
   <span class="prompt-library-bulk__count"><span class="prompt-library-bulk__count-num">0</span> ausgewählt</span>
+  <div class="prompt-library-bulk__category">
+    <span class="prompt-library-bulk__category-label">Kategorien bearbeiten</span>
+    <div class="prompt-library-bulk__category-picker">
+      <button type="button" class="prompt-library-bulk__category-toggle" aria-expanded="false" aria-controls="prompt-library-bulk-category-panel">
+        Kategorien wählen
+      </button>
+      <div id="prompt-library-bulk-category-panel" class="prompt-library-bulk__category-panel" hidden>
+        <div class="prompt-library-bulk__category-options"></div>
+      </div>
+    </div>
+    <button type="button" class="prompt-library-bulk__category-btn">Kategorien übernehmen</button>
+  </div>
   <button type="button" class="prompt-library-bulk__delete-btn">Ausgewählte löschen</button>
-  <p class="prompt-library-bulk__hint">Öffnet die Löschbestätigung pro Eintrag in neuen Tabs.</p>
+  <p class="prompt-library-bulk__hint">Referent*innen können Kategorien für ausgewählte Einträge gesammelt setzen oder entfernen und die Auswahl gesammelt löschen.</p>
 </div>
 <div class="prompt-library-list">

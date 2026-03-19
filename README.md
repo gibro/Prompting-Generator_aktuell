@@ -3,6 +3,24 @@
 Diese Vorlage stellt eine Prompt-Bibliothek in einer Moodle-Datenbankaktivität (`mod_data`) bereit.  
 Einträge können als wiederverwendbare Prompt-Templates gepflegt, mit Platzhaltern konfiguriert und als finaler Prompt in die Zwischenablage kopiert werden.
 
+## Rechte zuerst einrichten
+
+Bevor die Vorlagen eingesetzt werden, sollten die Rechte der Datenbank-Aktivität sauber gesetzt werden. Die ausgeblendeten Buttons in den Templates sind nur UI; maßgeblich sind die Moodle-Berechtigungen.
+
+- Für Teilnehmende, die Einträge nicht löschen dürfen, muss in der Aktivität mindestens `mod/data:manageentries` auf `Verbieten` bzw. `Nicht gesetzt` bleiben.
+- Wenn Teilnehmende gar keine eigenen Einträge bearbeiten oder löschen dürfen, muss zusätzlich `mod/data:writeentry` entzogen werden.
+- Wichtig: In der Standard-Datenbankaktivität umfasst `mod/data:writeentry` nicht nur das Anlegen, sondern auch das Bearbeiten und Löschen eigener Einträge. Es gibt dort keine getrennte Standard-Berechtigung nur für „eigene Einträge löschen“.
+- Wenn Teilnehmende nur lesen sollen, gib ihnen `mod/data:readentry` bzw. die üblichen Anzeige-Rechte, aber nicht `mod/data:writeentry`.
+- Wenn Referent*innen Einträge pflegen sollen, gib diese Rechte nur der entsprechenden Rolle oder setze sie über eine Rollenüberschreibung direkt in der Aktivität.
+
+Empfohlener Weg in Moodle:
+
+1. Datenbank-Aktivität öffnen.
+2. `Mehr > Rechte` oder `Rollen überschreiben` öffnen.
+3. Für die Teilnehmenden-Rolle `mod/data:manageentries` nicht erlauben.
+4. Für die Teilnehmenden-Rolle `mod/data:writeentry` ebenfalls nicht erlauben, wenn sie keine eigenen Einträge verändern oder löschen dürfen.
+5. Referent*innen/Trainer*innen die Pflege-Rechte nur dort geben, wo sie wirklich benötigt werden.
+
 ## Funktionen
 
 - Prompt-Karten in Listen- und Einzelansicht mit einheitlichem UI (inkl. responsivem Grid).
@@ -13,9 +31,10 @@ Einträge können als wiederverwendbare Prompt-Templates gepflegt, mit Platzhalt
 - Kategorie-Filter in der Listenansicht.
 - Kartenfokus per Overlay: Karte auswählen, erweitern, bearbeiten.
 - „Mehr“-Bereich zum Ein-/Ausklappen des Systemprompts.
-- Mehrfachauswahl und Sammellöschen (öffnet Löschdialoge je Eintrag in separaten Tabs).
+- Sammelaktion für Referent*innen: ausgewählten Einträgen in der Listenansicht eine zusätzliche Kategorie zuweisen.
+- Mehrfachauswahl und Sammellöschen mit gemeinsamer Bestätigung.
 - Rollenabhängige UI-Ausblendung:
-  - Für Teilnehmende/Studierende werden Bearbeiten/Löschen und Bulk-Delete ausgeblendet.
+  - Für Teilnehmende/Studierende werden Bearbeiten/Löschen und Bulk-Aktionen ausgeblendet.
 - Kategorie-Farbcodierung: Kartenfarbe wird aus der ersten Kategorie automatisch gesetzt.
 
 ## Datenmodell (Felder aus `preset.xml`)
@@ -81,7 +100,7 @@ Optional:
 ### Schritt 4: Rechte/Rollen prüfen
 
 Die CSS-Regeln blenden Bearbeiten/Löschen für Teilnehmende anhand von Body-Klassen aus (`role-student`, `role-teilnehmer`, `role-teilnehmende`).  
-Zusätzlich sollten die Moodle-Rechte korrekt gesetzt sein, damit Teilnehmende keine unerlaubten Aktionen ausführen können.
+Zusätzlich müssen die Moodle-Rechte korrekt gesetzt sein, damit Teilnehmende keine unerlaubten Aktionen ausführen können. Maßgeblich sind dabei vor allem `mod/data:manageentries` und `mod/data:writeentry` aus der Einleitung oben.
 
 ### Schritt 5: Funktionstest
 
@@ -89,6 +108,7 @@ Zusätzlich sollten die Moodle-Rechte korrekt gesetzt sein, damit Teilnehmende k
    `Erstelle einen Unterrichtsplan für {Fach} in Klasse {Klassenstufe}.`
 2. Listenansicht öffnen:
    - Kategorie filtern
+   - Mehrere Einträge markieren und testweise einer vorhandenen Kategorie zuordnen
    - Karte auswählen
    - Platzhalter ausfüllen
    - **In die Zwischenablage kopieren** testen
@@ -99,4 +119,3 @@ Zusätzlich sollten die Moodle-Rechte korrekt gesetzt sein, damit Teilnehmende k
 - Neue Kategorien können in `preset.xml` im Feld `Kategorie` (`<param1>...</param1>`) ergänzt werden.
 - UI/Branding wird über `csstemplate.css` gesteuert.
 - Interaktionslogik (Platzhalter, Copy, Filter, Bulk) liegt in `jstemplate.js`.
-
