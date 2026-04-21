@@ -66,13 +66,17 @@ Empfohlener Weg in Moodle:
 
 ### Schritt 1: Datenbankaktivität anlegen
 
-1. Im Kurs auf **Aktivität oder Material anlegen** klicken.
-2. **Datenbank** auswählen.
-3. Aktivität benennen (z. B. `Prompting-Generator`), speichern.
+1. Im Kurs auf **Aktivität oder Material anlegen** klicken.<img width="801" height="184" alt="Screenshot 2026-04-21 122809" src="https://github.com/user-attachments/assets/f9d97077-540d-4720-8297-e82f2cfbe875" />
+
+1. **Datenbank** auswählen.<img width="1116" height="757" alt="Screenshot 2026-04-21 123404" src="https://github.com/user-attachments/assets/47a64973-a4c1-4694-8c04-de7badeeadc0" />
+
+1. Aktivität benennen (z. B. `Prompting-Generator`), speichern.<img width="813" height="512" alt="Screenshot 2026-04-21 123522" src="https://github.com/user-attachments/assets/7a0089ba-378a-474b-866b-fe135c264000" />
+
 
 ### Schritt 2: Preset importieren
 
-1. Die angelegte Datenbank öffnen.
+1. Die angelegte Datenbank öffnen.<img width="797" height="427" alt="Screenshot 2026-04-21 123656" src="https://github.com/user-attachments/assets/3dd52939-ac74-4a99-b264-7edbce647b6d" />
+
 2. Reiter **Vorlagen** oder **Voreinstellungen** (je nach Moodle-Version/Theme) öffnen.
 3. **Preset importieren** auswählen.
 4. Datei `preset.xml` aus diesem Repository hochladen.
