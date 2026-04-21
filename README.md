@@ -89,8 +89,9 @@ Empfohlener Weg in Moodle:
    
 1. Das Ergebnis sollte so aussehen: <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/bee94b7c-a3d6-4a4d-8561-bcd495f3e638" />
 
-1. Den Reiter **Datenbank** wählen <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/2e455769-03f6-4c9e-8d6b-b12736137d93" />
- und ganz unten "Einträge hochladen" anklicken.
+1. Den Reiter **Datenbank** wählen 
+ <img width="731" height="366" alt="Screenshot 2026-04-21 130710" src="https://github.com/user-attachments/assets/b885f23e-b32c-40c0-ad2c-2ef94e6e269b" /> und **Einträge importieren**
+" anklicken.
 
 1. Datei auswählen <img width="875" height="585" alt="Screenshot 2026-04-21 130732" src="https://github.com/user-attachments/assets/b521caaa-66a5-49eb-a655-2a4b64ed0463" />
 
