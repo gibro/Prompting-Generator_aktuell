@@ -85,11 +85,27 @@ Empfohlener Weg in Moodle:
 
 1. Datei hochladen <img width="852" height="568" alt="Screenshot 2026-04-21 125432" src="https://github.com/user-attachments/assets/a8a2243d-ebdf-4a76-a52a-2488a4ba75a9" />
 
-1. Vorlagensatz importiern und anwenden <img width="781" height="499" alt="Screenshot 2026-04-21 125441" src="https://github.com/user-attachments/assets/c6c31faa-277c-4805-bac1-91ffdfcd3f17" />
+1. Vorlagensatz importiern und anwenden <img width="781" height="499" alt="Screenshot 2026-04-21 125441" src="https://github.com/user-attachments/assets/c6c31faa-277c-4805-bac1-91ffdfcd3f17" /> 
    
 1. Das Ergebnis sollte so aussehen: <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/bee94b7c-a3d6-4a4d-8561-bcd495f3e638" />
 
-Damit werden die benötigten Felder (`Titel`, `Prompt`, `Kategorie`, `Systemprompt`, `Beispiel-Output`) angelegt.
+1. Den Reiter **Datenbank** wählen <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/2e455769-03f6-4c9e-8d6b-b12736137d93" />
+ und ganz unten "Einträge hochladen" anklicken.
+
+1. Datei auswählen <img width="875" height="585" alt="Screenshot 2026-04-21 130732" src="https://github.com/user-attachments/assets/b521caaa-66a5-49eb-a655-2a4b64ed0463" />
+
+1. "Prompt-Generator-irgendwas.csv" wählen <img width="615" height="86" alt="Screenshot 2026-04-21 130746" src="https://github.com/user-attachments/assets/30643322-3fb5-438f-b36f-925aacb17b7d" />
+
+1. Datei hochladen <img width="849" height="549" alt="Screenshot 2026-04-21 130759" src="https://github.com/user-attachments/assets/43ae8a7c-a1a6-414f-81f8-d07114c36837" />
+
+1. Speichern <img width="813" height="696" alt="Screenshot 2026-04-21 130810" src="https://github.com/user-attachments/assets/c7ab3bcd-ee8b-4a55-a903-7960087a4a7a" />
+
+1. Das Ergebnis sollte so aussehen: <img width="623" height="751" alt="Screenshot 2026-04-21 130827" src="https://github.com/user-attachments/assets/453a8397-a435-4a7a-b052-c3adbd0c8e44" />
+
+1. Beim nächsten Anwählen des Reites **Datenbank** sollten diese Einträge zu sehen sein: <img width="810" height="733" alt="Screenshot 2026-04-21 132010" src="https://github.com/user-attachments/assets/aa19e35c-05e4-4afb-b0d0-ed52d1e05f83" />
+
+
+
 
 ### Schritt 3: Templates einfügen
 
