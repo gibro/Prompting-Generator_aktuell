@@ -77,10 +77,17 @@ Empfohlener Weg in Moodle:
 
 1. Die angelegte Datenbank öffnen.<img width="797" height="427" alt="Screenshot 2026-04-21 123656" src="https://github.com/user-attachments/assets/3dd52939-ac74-4a99-b264-7edbce647b6d" />
 
-2. Reiter **Vorlagen** oder **Voreinstellungen** (je nach Moodle-Version/Theme) öffnen.
-3. **Preset importieren** auswählen.
-4. Datei `preset.xml` aus diesem Repository hochladen.
-5. Import bestätigen.
+1. Schaltfläche **Vorlagensatz importieren** anklicken.<img width="802" height="529" alt="Screenshot 2026-04-21 125017" src="https://github.com/user-attachments/assets/03992f65-2d42-4784-a6be-8236c361f0de" />
+
+1. Datei auswählen <img width="797" height="427" alt="Screenshot 2026-04-21 123656" src="https://github.com/user-attachments/assets/10269b3b-9d32-491f-9dcd-1a55641f08b0" />
+
+1. Datei "Prompting-Generator-Vorlagensatz" anklicken <img width="659" height="110" alt="Screenshot 2026-04-21 125416" src="https://github.com/user-attachments/assets/a67297e1-ef5c-4174-bdaa-ad5681d85f9f" />
+
+1. Datei hochladen <img width="852" height="568" alt="Screenshot 2026-04-21 125432" src="https://github.com/user-attachments/assets/a8a2243d-ebdf-4a76-a52a-2488a4ba75a9" />
+
+1. Vorlagensatz importiern und anwenden <img width="781" height="499" alt="Screenshot 2026-04-21 125441" src="https://github.com/user-attachments/assets/c6c31faa-277c-4805-bac1-91ffdfcd3f17" />
+   
+1. Das Ergebnis sollte so aussehen: <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/bee94b7c-a3d6-4a4d-8561-bcd495f3e638" />
 
 Damit werden die benötigten Felder (`Titel`, `Prompt`, `Kategorie`, `Systemprompt`, `Beispiel-Output`) angelegt.
 
