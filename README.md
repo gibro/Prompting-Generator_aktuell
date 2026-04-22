@@ -66,6 +66,9 @@ Empfohlener Weg in Moodle:
 
 ### Schritt 1: Datenbankaktivität anlegen
 
+Optional kann das Vorlagensatz-Zipfile durch Komprimieren der Dateien **im** Verzeichnis **Prompting-Generator-Datenbank-Vorlagensatz** erzeugt werden. Die Zip-Datei darf keine Verzeichnisse, sondern nur die Dateien selbst. <img width="962" height="349" alt="Screenshot 2026-04-22 092708" src="https://github.com/user-attachments/assets/f7685a52-1891-41e6-8cff-0f7e02b6655d" />
+Insbesondere darf die Zip-Datei **nicht das Verzeichnis Prompting-Generator-Datenbank-Vorlagensatz** sondern nur die darin befindlichen Dateien enhtalten.
+
 1. Im Kurs auf **Aktivität oder Material anlegen** klicken.<img width="801" height="184" alt="Screenshot 2026-04-21 122809" src="https://github.com/user-attachments/assets/f9d97077-540d-4720-8297-e82f2cfbe875" />
 
 1. **Datenbank** auswählen.<img width="1116" height="757" alt="Screenshot 2026-04-21 123404" src="https://github.com/user-attachments/assets/47a64973-a4c1-4694-8c04-de7badeeadc0" />
