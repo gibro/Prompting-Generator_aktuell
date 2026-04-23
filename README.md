@@ -66,19 +66,50 @@ Empfohlener Weg in Moodle:
 
 ### Schritt 1: Datenbankaktivität anlegen
 
-1. Im Kurs auf **Aktivität oder Material anlegen** klicken.
-2. **Datenbank** auswählen.
-3. Aktivität benennen (z. B. `Prompting-Generator`), speichern.
+Optional kann das Vorlagensatz-Zipfile durch Komprimieren der Dateien **im** Verzeichnis **Prompting-Generator-Datenbank-Vorlagensatz** erzeugt werden. Die Zip-Datei darf keine Verzeichnisse, sondern nur die Dateien selbst. <img width="962" height="349" alt="Screenshot 2026-04-22 092708" src="https://github.com/user-attachments/assets/f7685a52-1891-41e6-8cff-0f7e02b6655d" />
+Insbesondere darf die Zip-Datei **nicht das Verzeichnis Prompting-Generator-Datenbank-Vorlagensatz** sondern nur die darin befindlichen Dateien enhtalten.
+
+1. Im Kurs auf **Aktivität oder Material anlegen** klicken.<img width="801" height="184" alt="Screenshot 2026-04-21 122809" src="https://github.com/user-attachments/assets/f9d97077-540d-4720-8297-e82f2cfbe875" />
+
+1. **Datenbank** auswählen.<img width="1116" height="757" alt="Screenshot 2026-04-21 123404" src="https://github.com/user-attachments/assets/47a64973-a4c1-4694-8c04-de7badeeadc0" />
+
+1. Aktivität benennen (z. B. `Prompting-Generator`), speichern.<img width="813" height="512" alt="Screenshot 2026-04-21 123522" src="https://github.com/user-attachments/assets/7a0089ba-378a-474b-866b-fe135c264000" />
+
 
 ### Schritt 2: Preset importieren
 
-1. Die angelegte Datenbank öffnen.
-2. Reiter **Vorlagen** oder **Voreinstellungen** (je nach Moodle-Version/Theme) öffnen.
-3. **Preset importieren** auswählen.
-4. Datei `preset.xml` aus diesem Repository hochladen.
-5. Import bestätigen.
+1. Die angelegte Datenbank öffnen.<img width="797" height="427" alt="Screenshot 2026-04-21 123656" src="https://github.com/user-attachments/assets/3dd52939-ac74-4a99-b264-7edbce647b6d" />
 
-Damit werden die benötigten Felder (`Titel`, `Prompt`, `Kategorie`, `Systemprompt`, `Beispiel-Output`) angelegt.
+1. Schaltfläche **Vorlagensatz importieren** anklicken.<img width="802" height="529" alt="Screenshot 2026-04-21 125017" src="https://github.com/user-attachments/assets/03992f65-2d42-4784-a6be-8236c361f0de" />
+
+1. Datei auswählen <img width="797" height="427" alt="Screenshot 2026-04-21 123656" src="https://github.com/user-attachments/assets/10269b3b-9d32-491f-9dcd-1a55641f08b0" />
+
+1. Datei "Prompting-Generator-Vorlagensatz" anklicken <img width="659" height="110" alt="Screenshot 2026-04-21 125416" src="https://github.com/user-attachments/assets/a67297e1-ef5c-4174-bdaa-ad5681d85f9f" />
+
+1. Datei hochladen <img width="852" height="568" alt="Screenshot 2026-04-21 125432" src="https://github.com/user-attachments/assets/a8a2243d-ebdf-4a76-a52a-2488a4ba75a9" />
+
+1. Vorlagensatz importiern und anwenden <img width="781" height="499" alt="Screenshot 2026-04-21 125441" src="https://github.com/user-attachments/assets/c6c31faa-277c-4805-bac1-91ffdfcd3f17" /> 
+   
+1. Das Ergebnis sollte so aussehen: <img width="806" height="684" alt="Screenshot 2026-04-21 125459" src="https://github.com/user-attachments/assets/bee94b7c-a3d6-4a4d-8561-bcd495f3e638" />
+
+1. Den Reiter **Datenbank** wählen 
+ <img width="731" height="366" alt="Screenshot 2026-04-21 130710" src="https://github.com/user-attachments/assets/b885f23e-b32c-40c0-ad2c-2ef94e6e269b" /> und **Einträge importieren**
+" anklicken.
+
+1. Datei auswählen <img width="875" height="585" alt="Screenshot 2026-04-21 130732" src="https://github.com/user-attachments/assets/b521caaa-66a5-49eb-a655-2a4b64ed0463" />
+
+1. "Prompt-Generator-irgendwas.csv" wählen <img width="615" height="86" alt="Screenshot 2026-04-21 130746" src="https://github.com/user-attachments/assets/30643322-3fb5-438f-b36f-925aacb17b7d" />
+
+1. Datei hochladen <img width="849" height="549" alt="Screenshot 2026-04-21 130759" src="https://github.com/user-attachments/assets/43ae8a7c-a1a6-414f-81f8-d07114c36837" />
+
+1. Speichern <img width="813" height="696" alt="Screenshot 2026-04-21 130810" src="https://github.com/user-attachments/assets/c7ab3bcd-ee8b-4a55-a903-7960087a4a7a" />
+
+1. Das Ergebnis sollte so aussehen: <img width="623" height="751" alt="Screenshot 2026-04-21 130827" src="https://github.com/user-attachments/assets/453a8397-a435-4a7a-b052-c3adbd0c8e44" />
+
+1. Beim nächsten Anwählen des Reites **Datenbank** sollten diese Einträge zu sehen sein: <img width="810" height="733" alt="Screenshot 2026-04-21 132010" src="https://github.com/user-attachments/assets/aa19e35c-05e4-4afb-b0d0-ed52d1e05f83" />
+
+
+
 
 ### Schritt 3: Templates einfügen
 
